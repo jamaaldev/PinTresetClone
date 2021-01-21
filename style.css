@@ -42,7 +42,7 @@ header {
     }
 
     .nav .mobilemenu .home {
-        display: flex;
+        display: flex !important;
         align-items: center;
         padding: 13px 15px;
 
@@ -71,7 +71,7 @@ header {
         width: 170px;
         min-width: 150px;
        padding: 0;
-      display: none;
+      display: block;
       -webkit-box-shadow: 0px 0px 3px 1px #f1f0f1; 
       box-shadow: 0px 0px 3px 1px #f1f0f1;
     }
@@ -81,7 +81,7 @@ header {
 
        
     } */
-    .mobileactive{
+    li[data-active$="home"]{
         display: block !important;
     }
     .submobilemenu li{
@@ -91,9 +91,7 @@ header {
         padding-top: 5px;
         padding-bottom: 5px;
         margin: 5px;
-        color: black;
-      
-
+        color: black !important;
     }
 
 }
@@ -114,14 +112,22 @@ header {
 
 }
 
-.active {
-    background-color: #000;
+li[data-active="home"] {
+    background-color: #000 !important;
     color: white;
     padding: 14px 20px;
     border-radius: 50px;
 
 }
+.submobilemenu li{
+    background-color: transparent !important;
 
+    padding: 7px;
+}
+.submobilemenu li:hover{
+background-color: white !important;
+padding: 7px;
+}
 .pinlogo {
     color: #e60023;
     font-size: 25px;

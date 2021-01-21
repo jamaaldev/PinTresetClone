@@ -55,6 +55,45 @@ header {
     .nav .topnav {
         display: none !important;
     }
+
+    .mobilemenu{
+        position: relative;
+
+    }
+
+   .mobilemenu .submobilemenu{
+       background-color: #fafafa;
+       list-style: none;
+       position: absolute;
+       border-radius: 5px;
+       top: 50px;
+       left: -40px;
+        width: 170px;
+        min-width: 150px;
+       padding: 0;
+      display: none;
+      
+    }
+    /* .home:active .submobilemenu{
+        display: block !important;
+       
+
+       
+    } */
+    .mobileactive{
+        display: block !important;
+    }
+    .submobilemenu li{
+        border-radius: 5px !important;
+        padding-right: 50px;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 5px;
+        color: black;
+
+    }
+
 }
 
 .nav .topnav {

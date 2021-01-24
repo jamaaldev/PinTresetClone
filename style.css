@@ -62,6 +62,7 @@ header {
     }
 
    .mobilemenu .submobilemenu{
+       display: none;
        background-color: #fafafa;
        list-style: none;
        position: absolute;
@@ -71,19 +72,12 @@ header {
         width: 170px;
         min-width: 150px;
        padding: 0;
-      display: block;
       -webkit-box-shadow: 0px 0px 3px 1px #f1f0f1; 
       box-shadow: 0px 0px 3px 1px #f1f0f1;
+    
     }
-    /* .home:active .submobilemenu{
-        display: block !important;
-       
-
-       
-    } */
-    li[data-active$="home"]{
-        display: block !important;
-    }
+    
+    
     .submobilemenu li{
         border-radius: 5px !important;
         padding-right: 50px;
@@ -92,8 +86,25 @@ header {
         padding-bottom: 5px;
         margin: 5px;
         color: black !important;
+        line-height: inherit !important;
+
+    }
+    
+
+    .submobilemenu > [data-active$="home"]::after{
+        content: '\2713';
+        padding-left: 85px;
     }
 
+    /* this will be temporary at the moment for activating the submenu */
+    .mobilemenu .submobilemenu {
+        /* i will add on javaScript  */
+        display: block;
+       
+       
+    }
+   
+    
 }
 
 .nav .topnav {
@@ -106,7 +117,7 @@ header {
 }
 
 
-.nav ul li:hover:not(.active) {
+.nav ul li:hover:not(data-active) {
     background-color: #efefef;
     border-radius: 50px;
 
@@ -269,9 +280,3 @@ padding: 7px;
 
 }
 
-/* .active{
-    background-color: #000;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 50px;
-} */

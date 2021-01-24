@@ -13,6 +13,7 @@ header {
     margin: 0px 15px;
 }
 
+/* Desktop Size */
 .nav {
     position: relative;
     display: flex;
@@ -23,89 +24,6 @@ header {
     padding: 13px 15px;
 }
 
-.nav .mobilemenu {
-    display: none;
-
-}
-
-/* mobile Tablet responsivaly */
-@media only screen and (max-width: 848px) {
-
-    .nav .mobilemenu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        align-items: center;
-        border-radius: 50px;
-        padding: 0px;
-    }
-
-    .nav .mobilemenu .home {
-        display: flex !important;
-        align-items: center;
-        padding: 13px 15px;
-
-    }
-
-    .nav .mobilemenu .home i {
-        padding-left: 5px;
-    }
-
-    .nav .topnav {
-        display: none !important;
-    }
-
-    .mobilemenu{
-        position: relative;
-
-    }
-
-   .mobilemenu .submobilemenu{
-       display: none;
-       background-color: #fafafa;
-       list-style: none;
-       position: absolute;
-       border-radius: 5px;
-       top: 55px;
-       left: -40px;
-        width: 170px;
-        min-width: 150px;
-       padding: 0;
-      -webkit-box-shadow: 0px 0px 3px 1px #f1f0f1; 
-      box-shadow: 0px 0px 3px 1px #f1f0f1;
-    
-    }
-    
-    
-    .submobilemenu li{
-        border-radius: 5px !important;
-        padding-right: 50px;
-        padding-left: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 5px;
-        color: black !important;
-        line-height: inherit !important;
-
-    }
-    
-
-    .submobilemenu > [data-active$="home"]::after{
-        content: '\2713';
-        padding-left: 85px;
-    }
-
-    /* this will be temporary at the moment for activating the submenu */
-    .mobilemenu .submobilemenu {
-        /* i will add on javaScript  */
-        display: block;
-       
-       
-    }
-   
-    
-}
 
 .nav .topnav {
     display: flex;
@@ -115,7 +33,6 @@ header {
     font-weight: bold;
 
 }
-
 
 .nav ul li:hover:not(data-active) {
     background-color: #efefef;
@@ -130,15 +47,18 @@ li[data-active="home"] {
     border-radius: 50px;
 
 }
-.submobilemenu li{
+
+.submobilemenu li {
     background-color: transparent !important;
 
     padding: 7px;
 }
-.submobilemenu li:hover{
-background-color: white !important;
-padding: 7px;
+
+.submobilemenu li:hover {
+    background-color: white !important;
+    padding: 7px;
 }
+
 .pinlogo {
     color: #e60023;
     font-size: 25px;
@@ -245,14 +165,11 @@ padding: 7px;
     padding-top: 0px;
     padding-bottom: 0px;
 
-
 }
 
 .iconsbar .profilename:hover {
     padding-top: 0px;
     padding-bottom: 0px;
-
-
 }
 
 .iconsbar .profilemenu .pmenu {
@@ -277,6 +194,4 @@ padding: 7px;
     font-size: 25px;
     color: #767676;
 
-
 }
-

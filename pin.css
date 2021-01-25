@@ -1,0 +1,66 @@
+
+main{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+max-width:1520px;
+
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+figure{
+    max-height: 600px;
+    width: 236px;
+    background-color: #f7fafa;
+    margin: 5px 7px;
+}
+
+figure .pinimage{
+    background-image: url('./IMG_20191006_052334.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 460px;
+    border-radius: 15px;
+}
+
+figure .save{
+    position: absolute;
+    margin-top: -450px;
+    margin-left: 166px;
+    background-color:#E60023;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px;
+    color:white;
+
+}
+
+figure .save:hover{
+    background-color: #AD081B;
+}
+
+figure .shareicon{
+    color: #1e1718;
+    margin-top: -44px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    float:right;
+}
+
+figure .shareicon i{
+    background-color: #fcfcfcc4;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+figure .shareicon i:hover{
+    background-color: #fcfcfc;
+    
+}

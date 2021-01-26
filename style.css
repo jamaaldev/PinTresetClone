@@ -19,12 +19,18 @@ header {
     display: flex;
     align-items: center;
 }
+.pinlogo {
+    color: #e60023;
+    font-size: 25px;
+    padding: 5px 10px;
 
-.nav .topnav li {
-    padding: 13px 15px;
 }
 
+.pinlogo:hover {
+    background-color: #f1f0f1;
+    border-radius: 50px;
 
+}
 .nav .topnav {
     display: flex;
     padding-left: 0px;
@@ -33,6 +39,12 @@ header {
     font-weight: bold;
 
 }
+
+.nav .topnav li {
+    padding: 13px 15px;
+}
+
+
 
 .nav ul li:hover:not(data-active) {
     background-color: #efefef;
@@ -59,18 +71,6 @@ li[data-active="home"] {
     padding: 7px;
 }
 
-.pinlogo {
-    color: #e60023;
-    font-size: 25px;
-    padding: 5px 10px;
-
-}
-
-.pinlogo:hover {
-    background-color: #f1f0f1;
-    border-radius: 50px;
-
-}
 
 .search {
     flex: 1;

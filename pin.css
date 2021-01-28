@@ -16,6 +16,7 @@ section{
 }
 
 figure{
+    position: relative;
     max-height: 600px;
     width: 236px;
     background-color: #f7fafa;
@@ -28,40 +29,70 @@ figure .pinimage{
     background-size: cover;
     height: 460px;
     border-radius: 15px;
+   
 }
 
-figure .save{
+figure .pininfo{
     position: absolute;
-    margin-top: -450px;
-    margin-left: 166px;
-    background-color:#E60023;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 15px;
-    color:white;
+    top: 0;
+    width: 236px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+ figure:hover .pinimage:hover {
+   background-blend-mode: overlay !important;
+   background-position: center !important;
+   background-size: cover !important;
+   background-color: #2b28283b !important;
 
 }
 
-figure .save:hover{
-    background-color: #AD081B;
-}
-
-figure .shareicon{
-    color: #1e1718;
-    margin-top: -44px;
-    margin-bottom: 8px;
+.pininfo .pinsave{
+    text-align: end;
+    margin-top: 20px;
     margin-right: 10px;
-    float:right;
 }
-
-figure .shareicon i{
-    background-color: #fcfcfcc4;
-    padding: 10px;
+.pininfo .pinsave span{
+    background-color: #E60023;
     border-radius: 30px;
-
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
 }
-figure .shareicon i:hover{
-    background-color: #fcfcfc;
+.pininfo .pinsave span:hover{
+    background-color: #AD081B;
+ 
+}
+/* this will make the icons of in sharedown go down */
+.pinimage{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.pininside{
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+}
+figure:hover .pininside{
+    display: flex;
+    cursor: zoom-in;
+}
+.pinshare{
+    margin-right: 10px;
+    margin-bottom: 15px;
+    z-index: 10;
+}
+.pinshare i{
+    background-color: #ffffffd3;
+    border-radius: 30px;
+    padding: 8px;
+    margin-left: 5px;
     
+}
+.pinshare i:hover{
+    background-color: #ffffff;
 }

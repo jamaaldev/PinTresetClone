@@ -15,35 +15,35 @@ section{
     width: 100%;
 }
 
-figure{
+.pinboxmodel{
     position: relative;
-    max-height: 600px;
     width: 236px;
+    /* height:min-content; */
     background-color: #f7fafa;
     margin: 5px 7px;
 }
 
-figure .pinimage{
+.pinboxmodel .pinimage{
     background-image: url('https://images.unsplash.com/photo-1522277245807-5e608aa8adcd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80');
     background-position: center;
     background-size: cover;
-    height: 460px;
+    width: 100%;
+    /* height:min-content; */
     border-radius: 15px;
    
 }
 
-figure .pininfo{
+.pinboxmodel .pininfo{
     display: flex;
     justify-content: flex-end;
     position: absolute;
     top: 0;
-    left: 0;
     width: 236px;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 15px;
 }
 
- figure:hover .pinimage:hover {
+ .pinboxmodel:hover .pinimage:hover {
    background-blend-mode: overlay !important;
    background-position: center !important;
    background-size: cover !important;
@@ -80,7 +80,7 @@ figure .pininfo{
     justify-content: flex-end;
     display: none;
 }
-figure:hover .pininside{
+.pinboxmodel:hover .pininside{
     display: flex;
     cursor: zoom-in;
 }
@@ -88,6 +88,8 @@ figure:hover .pininside{
     margin-right: 10px;
     margin-bottom: 15px;
     z-index: 10;
+    text-align: center;
+
 }
 .pinshare i{
     background-color: #ffffffd3;
@@ -98,4 +100,10 @@ figure:hover .pininside{
 }
 .pinshare i:hover{
     background-color: #ffffff;
+}
+
+.captures{
+    display: block;
+    justify-content: center;
+    align-items: center;
 }

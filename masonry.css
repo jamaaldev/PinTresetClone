@@ -1,0 +1,131 @@
+
+main{
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width:1820px;
+    margin: auto;
+    
+    }
+    section{
+      columns: 6;
+    }
+    @media only screen and (max-width: 1300px) {
+        section{
+            columns: 5;
+          }
+    }
+    @media only screen and (max-width: 1180px) {
+        section{
+            columns: 4;
+          }
+    }
+    @media only screen and (max-width: 900px) {
+        section{
+            columns: 3;
+          }
+    }
+    @media only screen and (max-width: 700px) {
+        section{
+            columns: 2;
+          }
+    }
+    @media only screen and (max-width: 500px) {
+        section{
+            columns: 1;
+          }
+    }
+    .pinboxmodel{
+        position: relative;
+        /* width: 236px; */
+        /* height:min-content; */
+        background-color: #f7fafa;
+        margin: 0px 7px;
+        break-inside: avoid;
+    }
+    
+    .pinboxmodel .pinimage{
+        background-image: url('https://images.unsplash.com/photo-1522277245807-5e608aa8adcd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        /* height:min-content; */
+        border-radius: 15px;
+       
+    }
+    
+    .pinboxmodel .pininfo{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        width: 236px;
+        /* height: 100%; */
+        border-radius: 15px;
+    }
+    
+     .pinboxmodel:hover .pinimage:hover {
+       background-blend-mode: overlay !important;
+       background-position: center !important;
+       background-size: cover !important;
+       background-color: #2b28283b !important;
+    
+    }
+    
+    .pininfo .pinsave{
+        text-align: end;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .pininfo .pinsave span{
+        background-color: #E60023;
+        border-radius: 30px;
+        padding: 10px 12px;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+    }
+    .pininfo .pinsave span:hover{
+        background-color: #AD081B;
+     
+    }
+    /* this will make the icons of in sharedown go down */
+    .pinimage{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    
+    .pininside{
+        display: flex;
+        justify-content: flex-end;
+        display: none;
+    }
+    .pinboxmodel:hover .pininside{
+        display: flex;
+        cursor: zoom-in;
+    }
+    .pinshare{
+        margin-right: 10px;
+        margin-bottom: 15px;
+        z-index: 10;
+        text-align: center;
+    
+    }
+    .pinshare i{
+        background-color: #ffffffd3;
+        border-radius: 30px;
+        padding: 8px;
+        margin-left: 5px;
+        
+    }
+    .pinshare i:hover{
+        background-color: #ffffff;
+    }
+    
+    .captures{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }

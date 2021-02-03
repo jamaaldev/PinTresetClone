@@ -5,43 +5,40 @@ let sectionphoto = document.querySelector('#section');
 window.onload = () => {
     
     takeme();
-    getPhoto();
+    getPhoto(myDefult);
 }
 let htmlpost
 let saveme = [];
-let mytype = 'usa';
+let myDefult = "saudi";
 let mysearch;
 
 search.addEventListener('submit', (e)=>{
     e.preventDefault();
-    
-    mytype =  e.target.children[0].value;
-    if(mytype.length){
+    myDefult =  e.target.children[0].value;
+    if(myDefult.length){
         
         console.log('yes');
         takeme();
-        
-        return mytype;
+         
     }
 })
 function takeme(){
     
-    saveme.push(mytype);
+    saveme.push(myDefult);
     mysearch = saveme.pop();
     
     getPhoto(mysearch)
     
 }
 function getPhoto(myserch){
-    let url = `https://api.pexels.com/v1/search?query=${myserch}&per_page=50`;
+    let url = `https://api.unsplash.com/search/photos?client_id=${auth}&per_page=30&query=${myserch}`;
     fetch(url,{
         method:'GET',
-        headers:{
-            Authorization: auth,
-        }
+    
     }).then((response)=>{
         return response.json();
     }).then((photo) =>{
+        console.log(photo);
         showPhoto(photo)
     })
     
@@ -50,8 +47,11 @@ function getPhoto(myserch){
 const showPhoto = (photopin) => {
     // let photer = photopin.photos[0].url;
     sectionphoto.innerHTML = ``;
+    console.log(photopin);
+
     
-    for(photo of photopin.photos){
+
+    for(photo of photopin.results){
         // switch (photo.height){
         //     case 5676 > 800:
         //     case 1376:
@@ -66,9 +66,8 @@ const showPhoto = (photopin) => {
             photo.height = '235px';
         } 
        
-        console.log(photo);
         htmlpost = `<div class="pinboxmodel" style="height:max-content">
-    <div class="pinimage" style="background-image: url(${photo.src.large});height:${photo.height}">
+    <div class="pinimage" style="background-image: url(${photo.urls.regular});height:${photo.height}">
        <div class="pininside">  
           <div class="pininfo">
              <div class="pinsave"><span>Save</span></div>
@@ -80,11 +79,11 @@ const showPhoto = (photopin) => {
        </div>
     </div>
     <div class="captures">
-       <div class="cap">this is capture</div>
-       <div class="cap">this is capture</div>
-       <div class="cap">this is capture</div>
-       <div class="cap">this is capture</div>
-       <div class="cap">this is capture</div>
+    <div class="cap">${photo.alt_description}</div>
+    <div class="infopro">
+        <div class="profile" style="background-image: url(${photo.user.profile_image.medium})"></div>
+        <div class="proname">${photo.user.first_name} ${photo.user.last_name}</div>
+    </div>
     </div>
    </div>`;
    sectionphoto.innerHTML += htmlpost;

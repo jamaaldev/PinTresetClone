@@ -28,7 +28,7 @@ section{
     background-position: center;
     background-size: cover;
     width: 100%;
-    /* height:min-content; */
+    height: 420px;
     border-radius: 15px;
    
 }
@@ -106,4 +106,28 @@ section{
     display: block;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+
+}
+.cap{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.infopro{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.profile{
+    /* background-color: blue; */
+    /* background-image: url('http://placeimg.com/640/480/animals/cats'); */
+    background-position: center;
+    background-size: cover;
+    background-clip: padding-box;
+    /* width: 20px;
+    height: 20px; */
+    padding: 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-left: 5px;
 }

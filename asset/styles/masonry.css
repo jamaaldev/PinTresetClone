@@ -40,7 +40,7 @@ main{
         position: relative;
         /* width: 236px; */
         /* height:min-content; */
-        background-color: #f7fafa;
+        /* background-color: #f7fafa; */
         margin: 0px 7px;
         break-inside: avoid;
     }
@@ -128,4 +128,34 @@ main{
         display: block;
         justify-content: center;
         align-items: center;
+    }
+
+    .captures{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+    }
+    .cap{
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .infopro{
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .profile{
+        /* background-color: blue; */
+        /* background-image: url('http://placeimg.com/640/480/animals/cats'); */
+        background-position: center;
+        background-size: cover;
+        background-clip: padding-box;
+        /* width: 20px;
+        height: 20px; */
+        padding: 20px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-left: 5px;
     }
